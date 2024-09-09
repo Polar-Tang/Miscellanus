@@ -46,10 +46,6 @@ declare -a=['array', 1, true]
 # LIST
 # A list is a sequence of one or more pipelines separated by one of the operators ‘;’, ‘&’, ‘&&’, or ‘||’, and optionally terminated by one of ‘;’, ‘&’, or a newline.
 
-# EXECUTE THE COMAN ON THE BACKGROUND
-
-# EJECUTA SECUENCIALMENTE
-
 # The operators return a boolean
 # OR
 false || echo "This will run because the first command failed"
@@ -83,4 +79,89 @@ echo "$resultado"  # Output: 1
 
 sleep 10 &
 
+## Addition, subtraction, multiplication, division, modulo
+a=10
+b=5
 
+((sum = a + b))  # Addition
+echo "Sum: $sum"
+
+((difference = a - b))  # Subtraction
+echo "Difference: $difference"
+
+((product = a * b))  # Multiplication
+echo "Product: $product"
+
+((quotient = a / b))  # Division
+echo "Quotient: $quotient"
+
+((mod = a % b))  # Modulo
+echo "Modulo: $mod"
+
+# Comparison operators (return true or false)
+x=10
+y=20
+
+(( x < y )) && echo "$x is less than $y"
+(( x > y )) || echo "$x is not greater than $y"
+(( x == 10 )) && echo "$x equals 10"
+(( x != 5 )) && echo "$x is not equal to 5"
+
+# Assignment operators
+a=10
+((a += 5))  # Increment by 5
+echo "a after += 5: $a"
+
+((a -= 2))  # Decrement by 2
+echo "a after -= 2: $a"
+
+((a *= 3))  # Multiply by 3
+echo "a after *= 3: $a"
+
+((a /= 4))  # Divide by 4
+echo "a after /= 4: $a"
+
+((a %= 3))  # Modulo by 3
+echo "a after %= 3: $a"
+
+# Bitwise AND, OR, XOR, NOT, shifts
+x=6  # 6 in binary: 110
+y=3  # 3 in binary: 011
+
+((bitwise_and = x & y))  # Bitwise AND
+echo "Bitwise AND of $x and $y: $bitwise_and"
+
+((bitwise_or = x | y))  # Bitwise OR
+echo "Bitwise OR of $x and $y: $bitwise_or"
+
+((bitwise_xor = x ^ y))  # Bitwise XOR
+echo "Bitwise XOR of $x and $y: $bitwise_xor"
+
+((bitwise_not = ~x))  # Bitwise NOT
+echo "Bitwise NOT of $x: $bitwise_not"
+
+((left_shift = x << 1))  # Left shift
+echo "Left shift of $x: $left_shift"
+
+((right_shift = x >> 1))  # Right shift
+echo "Right shift of $x: $right_shift"
+
+# Identity-like operator for equality
+str1="Hello"
+str2="Hello"
+[ "$str1" == "$str2" ] && echo "Strings are equal"
+
+# Pattern matching with strings
+text="Bash scripting is fun"
+[[ $text == *"scripting"* ]] && echo "Text contains 'scripting'"
+
+# Check membership in arrays
+my_array=("apple" "banana" "cherry")
+if [[ " ${my_array[@]} " =~ " banana " ]]; then
+  echo "banana is in the array"
+fi
+
+# //   /* DIFICULTAD EXTRA (opcional):
+# //   * Crea un programa que imprima por consola todos los números comprendidos
+# //   * entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3.
+for[ 1 ]
