@@ -159,3 +159,29 @@ const grep = () => {
 
 }
 grep()
+
+
+// * Crea un programa que cuente cuantas veces se repite cada palabra
+// * y que muestre el recuento final de todas ellas.
+let inputList = []
+
+let initial = prompt("repetidos de palabras hasta que el input sea falsy")
+while ( initial ){
+ let input = prompt("Bienvenido al buscador de palabras, donde tu creas las palbras")
+inputList.push(input)    
+console.log(inputList)
+
+const initialValue = 0;
+const countWord = inputList.reduce((acc, word) =>{
+    word = word.toLocaleLowerCase()
+    if( acc[word] ){
+        acc[word]++
+    } else{
+        acc[word] = 1
+    }
+    return acc
+}, {})
+
+let muchMatch = inputList.filter((word) => word.toLocaleLowerCase() === word.toLocaleLowerCase())
+console.log(muchMatch, " con ", countWord, " palabras en común")
+}
