@@ -225,3 +225,68 @@
 * - Crea ejemplos de funciones básicas que representen las diferentes
 *   posibilidades del lenguaje:
 *   Sin parámetros ni retorno, con uno o varios parámetros, con retorno... */
+function functionExample1(mundo: string) {
+    return "Hola " + mundo
+}
+
+console.log(functionExample1("javier "))
+
+const functionExample2 = (mundo: string, nums: number[]) => { 
+    console.log("hello " + mundo + " this is your number list " + nums )
+ }
+
+functionExample2("javier", [1,2,4,5])
+
+/*  * - Comprueba si puedes crear funciones dentro de funciones.. 
+https://retosdeprogramacion.com/roadmap/*/
+
+const functionInsideFunction = () => {
+    console.log("this is global")
+
+    const functionInsider = () => { 
+        console.log("This is inside")
+     }
+ }
+
+// regular experssions
+const obj = {
+    name: "Object",
+    method1: function () {
+      console.log(this.name); // 'Object' (refers to obj)
+    },
+    method2: () => {
+      // console.log(this.name); // 'undefined' or window (arrow function doesn't have its own `this`)
+    }
+  };
+  
+  obj.method1();  // Logs 'Object'
+  obj.method2();  // Logs 'undefined' (or global scope in non-strict mode)
+  
+
+functionInsideFunction() // functionInsider is not called just because we call its daddy
+
+const getRectArea = function (width: number, height: number) {
+    return width * height;
+  };
+
+const getRectArea2 = (width: number, height:number) => { 
+    return width * height;
+ }
+
+console.log(getRectArea(2,2))
+console.log(getRectArea2(2,2))
+
+console.log(this); // Refers to the global object (window in browser, global in Node.js)
+
+// IIFE (Immediately Invoked Function Expression)
+// 
+const anonymousFunction = (function () {
+    console.log("I am an IIFE!");
+  })();
+  
+
+// arrow function
+const arrowAnonymousFunction =  (() => {
+    //
+  })();
+  

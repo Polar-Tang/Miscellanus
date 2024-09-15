@@ -165,23 +165,60 @@ grep()
 // * y que muestre el recuento final de todas ellas.
 let inputList = []
 
-let initial = prompt("repetidos de palabras hasta que el input sea falsy")
-while ( initial ){
- let input = prompt("Bienvenido al buscador de palabras, donde tu creas las palbras")
-inputList.push(input)    
-console.log(inputList)
+// let initial = prompt("repetidos de palabras hasta que el input sea falsy")
+// while ( initial ){
+//  let input = prompt("Bienvenido al buscador de palabras, donde tu creas las palbras")
+// inputList.push(input)    
+// console.log(inputList)
 
-const initialValue = 0;
-const countWord = inputList.reduce((acc, word) =>{
-    word = word.toLocaleLowerCase()
-    if( acc[word] ){
-        acc[word]++
-    } else{
-        acc[word] = 1
+// const countWord = inputList.reduce((acc, word) =>{
+//     word = word.toLocaleLowerCase()
+//     if( acc[word] ){
+//         acc[word]++
+//     } else{
+//         acc[word] = 1
+//     }
+//     return acc
+// }, {})
+
+// let muchMatch = inputList.filter((word) => word.toLocaleLowerCase() === word.toLocaleLowerCase())
+// console.log(muchMatch, " con ", countWord, " palabras en común")
+// }
+
+/*
+ * Crea un programa se encargue de transformar un número
+ * decimal a binario sin utilizar funciones propias del lenguaje que lo hagan directamente.
+ */
+const toBinary = (num) => { 
+    if ( isNaN(num)){
+        console.log("bad argument")
     }
-    return acc
-}, {})
-
-let muchMatch = inputList.filter((word) => word.toLocaleLowerCase() === word.toLocaleLowerCase())
-console.log(muchMatch, " con ", countWord, " palabras en común")
+    Number(num)
+    let getBinary = num.toString(2)
+    console.log(getBinary)
 }
+
+const morseCode = (text) => { 
+    
+    const morseCodeMap = {
+        'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',   'E': '.',
+        'F': '..-.',  'G': '--.',   'H': '....',  'I': '..',    'J': '.---',
+        'K': '-.-',   'L': '.-..',  'M': '--',    'N': '-.',    'O': '---',
+        'P': '.--.',  'Q': '--.-',  'R': '.-.',   'S': '...',   'T': '-',
+        'U': '..-',   'V': '...-',  'W': '.--',   'X': '-..-',  'Y': '-.--',
+        'Z': '--..',  '0': '-----', '1': '.----', '2': '..---', '3': '...--',
+        '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..',
+        '9': '----.', ' ': ' / '  // Represent space as /
+        };
+
+    let getArray = text.toUpperCase().split('');
+    let acc = []
+
+    getArray.forEach(char => {
+        if(morseCodeMap[char]){
+            acc.push(morseCodeMap[char])
+        }
+    });
+    return acc.join(' ');
+    }
+console.log(morseCode("Hola"))
