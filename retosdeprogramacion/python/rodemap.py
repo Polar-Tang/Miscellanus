@@ -596,4 +596,3 @@ def stack_and_queue():
         continue_prompt = input("Do you want to continue managing contacts? (yes/no): ").strip().lower()
         if continue_prompt == "no":
             break 
-stack_and_queue()

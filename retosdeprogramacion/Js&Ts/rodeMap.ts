@@ -289,4 +289,362 @@ const anonymousFunction = (function () {
 const arrowAnonymousFunction =  (() => {
     //
   })();
+
+//   * DIFICULTAD EXTRA (opcional):
+//   * Crea una función que reciba dos parámetros de tipo cadena de texto y retorne un número.
+//   * - La función imprime todos los números del 1 al 100. Teniendo en cuenta que:
+//   *   - Si el número es múltiplo de 3, muestra la cadena de texto del primer parámetro.
+//   *   - Si el número es múltiplo de 5, muestra la cadena de texto del segundo parámetro.
+//   *   - Si el número es múltiplo de 3 y de 5, muestra las dos cadenas de texto concatenadas.
+//   *   - La función retorna el número de veces que se ha impreso el número en lugar de los textos.
+const dic = {
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9
+}
+const stringToNumber = (numA: string, numB: string) => { 
+
+    for(let i = 1; i < 100; i++){
+        if(dic.hasOwnProperty(numA) && dic.hasOwnProperty(numB)){
+            const valueA = dic[numA]
+            const valueB = dic[numB]
+            
+            if( i % valueA == 0){
+                console.log(i, " es multiplo de ", valueA)
+            } else if( i % valueB == 0){
+                console.log(i, " es multiplo de ", valueB)
+            }
+        }
+
+        console.log("el indice es este ", i)
+    }
+}
+// console.log(stringToNumber("three", "four"))
+// * EJERCICIO:
+//  * - Muestra ejemplos de creación de todas las estructuras soportadas por defecto
+//  *   en tu lenguaje.
+//  * - Utiliza operaciones de inserción, borrado, actualización y ordenación.
+
+// PRIMITIVE DATA ----------------------------------------------------------------
+// NUMBER
+let num: number = 42;
+
+// STRING
+let str: string = "Hello, World!";
+
+// BOOLEAN
+let isDone: boolean = false;
+
+// BIGINT
+// let big: bigint = 100000000000000000000000000000000n;
+
+// NULL
+let nothing: null = null;
+let notDefined: undefined = undefined;
+
+// ARRAYS ------------------------------------------------------------------
+// Simple Array
+let numbers: number[] = [1, 2, 3];
+
+// GENERIC ARRAY
+let fruits: Array<string> = ["apple", "banana", "orange"];
+
+// -----------------------
+// TUPLE
+let tuple: [string, number] = ["age", 25];
+
+// OPTIONAL TUPLE
+let optionalTuple: [string, number?] = ["age"];
+
+// OBJECTS ------------------------------------
+let person: { name: string; age: number } = {
+    name: "Alice",
+    age: 30,
+  };
+
+// INTERFACE
+interface Person {
+    name: string;
+    age: number;
+  }
+  let alice: Person = { name: "Alice", age: 30 };
+
+// MAP
+let map = new Map<string, number>();
+map.set("one", 1);
+map.set("two", 2);
+
+// SET
+let set = new Set<number>();
+set.add(1);
+set.add(2);
+set.add(2); // Duplicate, won't be added again.
+
+// RECORD
+let userScores: Record<string, number> = {
+    Alice: 95,
+    Bob: 85,
+  };
+
+// ENUMS ----------------------------------
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+  }
+  let dir: Direction = Direction.Up;
+
+// SRTING ENUM
+enum Color {
+    Red = "RED",
+    Green = "GREEN",
+    Blue = "BLUE",
+  }
+
+// WEAK MAP && WEAK SET
+let weakMap = new WeakMap<object, string>();
+let objectMapExample = {};
+weakMap.set(objectMapExample, "value");
+// WEAK SET
+let weakSet = new WeakSet<object>();
+let obj2 = {};
+weakSet.add(obj2);
+
+// FUNCTIONS
+function add(a: number, b: number): number {
+    return a + b;
+  }
+
+// ARROW
+const multiply = (x: number, y: number): number => x * y;
+
+// UNION INTERCEPTION TYPES ------------------
+let value: string | number;
+value = "hello";
+value = 123;
+
+// INTERSEPTION TYPES -------------------------
+type A = { a: string };
+type B = { b: number };
+let ab: A & B = { a: "hello", b: 123 };
+
+// ANY && UNKOWN ------------------------
+let anything: any = "hello";
+anything = 123;
+
+let something: unknown = "hello";
+if (typeof something === "string") {
+  console.log(something.toUpperCase());
+}
+
+// NULL
+let empty: null = null;
+
+// UNDEFINED
+let uninitialized: undefined = undefined;
+
+// NEVER
+function throwError(message: string): never {
+    throw new Error(message);
+  }
   
+// GENERICS
+function identity<T>(arg: T): T {
+    return arg;
+  }
+
+// CLASSES AND INTERFACES
+class Person {
+    name: string;
+    constructor(name: string) {
+      this.name = name;
+    }
+  }
+  
+  interface Car {
+    make: string;
+    model: string;
+  }
+  
+
+// * DIFICULTAD EXTRA (opcional):
+// * Crea una agenda de contactos por terminal.
+// * - Debes implementar funcionalidades de búsqueda, inserción, actualización
+// *   y eliminación de contactos.
+// * - Cada contacto debe tener un nombre y un número de teléfono.
+// * - El programa solicita en primer lugar cuál es la operación que se quiere realizar,
+// *   y a continuación los datos necesarios para llevarla a cabo.
+// * - El programa no puede dejar introducir números de teléfono no númericos y con más
+// *   de 11 dígitos (o el número de dígitos que quieras).
+// * - También se debe proponer una operación de finalización del programa.
+
+// class User{
+//     name : string
+//     id : number
+//     phone_number : number
+
+//     constructor(name: string, id: number, phone_number: number){
+//         this.name= name
+//         this.id= id
+//         this.phone_number = phone_number
+//     }
+// }
+
+// const usuario_0 = new User("pedro", 1, 12312512)
+
+// class HandleUser  {
+//     users: User[]
+//     id_counter: number
+    
+//     constructor(){
+//         this.users = []
+//         this.id_counter= 0
+//     }
+//     addUser(name: string, phone_number: number){
+//         const new_user : User = new User(name, this.id_counter++, phone_number)
+//         this.users.push(new_user)
+//     }
+//     deleteUser(name: string){
+//         const find_user_by_index = this.users.findIndex(user => user.name === name)
+//         if(find_user_by_index != -1){
+//             this.users.splice(find_user_by_index, 1)
+//         } else {
+//             console.log("User not found")
+//         }
+//     }
+// }
+// const handle_user: HandleUser = new HandleUser()
+// let always_terminal = prompt("Que operación quiere realizar?\ndel delete some user\nadd create a user\nstop stops this")  
+// while(always_terminal){
+//     if(always_terminal.includes("del")){
+//         always_terminal = prompt(handle_user.users + " What of all these users do you wanna delete?")
+//         handle_user.deleteUser(always_terminal)
+//         continue
+//     } else if(always_terminal.includes("add")){
+//         always_terminal = prompt("Write number and phonenumber, in THAT order")
+//         const [name, phone] = always_terminal.split(" ")
+//         console.log(always_terminal)
+//         handle_user.addUser(name, parseInt(phone))
+//     } 
+//     console.log(handle_user.users)
+//     always_terminal = prompt("Que operación quiere realizar?\ndel delete some user\nadd create a user\nstop stops this")  
+// }
+
+// * EJERCICIO:
+//  * Muestra ejemplos de todas las operaciones que puedes realizar con cadenas de caracteres
+//  * en tu lenguaje. Algunas de esas operaciones podrían ser (busca todas las que puedas):
+//  * - Acceso a caracteres específicos, subcadenas, longitud, concatenación, repetición,
+//  *   recorrido, conversión a mayúsculas y minúsculas, reemplazo, división, unión,
+//  *   interpolación, verificación...
+const paragraph = "lorem ipsum"
+
+// ACCess to special characters
+// console.log(paragraph.slice(0,2))
+// Access to the character index
+// console.log(paragraph.indexOf("lo"))
+// search special characters
+const regex = /[^\w\s']/g;
+
+// console.log(paragraph.search(regex));
+// substring
+// console.log(paragraph.split(""))
+console.log(String.fromCharCode(189, 43, 190, 61));
+// length
+paragraph.length
+// concatenate
+paragraph + " concatenate"
+// repetition
+console.log("a".repeat(10))
+
+// route
+// const each_lyric: string[] = paragraph.split("")
+// each_lyric.forEach((lyric, index) => 
+//   console.log("this the lyric ", lyric, " and its index is: ", index)
+// )
+
+// capital
+paragraph.toUpperCase()
+// lowercase
+paragraph.toLocaleLowerCase()
+
+// replace
+paragraph.replace("ipsum", "ipso")
+
+// union
+paragraph.concat("!")
+
+const age = 25;
+const nameExample = "alice"
+
+console.log(`My name is ${nameExample} and I am ${age} years old.`);
+
+// verification
+
+// if (paragraph.includes("lorem")){
+//   console.log("INcluye la pabalabra lorem")
+// } else{
+//   console.log("ocurrtió un error")
+// }
+
+// interpolation
+
+
+// * DIFICULTAD EXTRA (opcional):
+// * Crea un programa que analice dos palabras diferentes y realice comprobaciones
+// * para descubrir si son:
+// * - Palíndromos
+
+// console.log(firstArray.reverse().toString().replace(regexForTHis, ''))
+const secondParagraph: string = "muspi merol"
+const firstArray: string[] = paragraph.split("")
+const secondArray: string[] = secondParagraph.split("")
+const regexForTHis = /,/g;
+
+// let isPalindrom = firstArray.reverse().toString() == secondArray.toString()
+
+// if (isPalindrom){
+//   console.log("Es un palindromo")
+// }else {
+//   console.log("Lo siento, no es un palindromo, lo lamento mucho")
+// }
+
+// * - Anagramas
+// let isAnagram = firstArray.sort().toString() == secondArray.sort().toString()
+
+// if (isAnagram){
+//   console.log("Es un anagrama")
+// }else {
+//   console.log("Lo siento, no es un anagrama, lo lamento mucho")
+// }
+
+//  * - Isogramas
+// let accNum = 0
+// const firstArrayIterator = firstArray.values();
+// let secondArraySorted = secondArray.sort()
+// for (const value of firstArrayIterator) {
+//   console.log(value)
+//   // if (secondArray.includes(value)){
+//   //   accNum++
+//   // } else {
+//   //   console.log("It's not an isogram")
+//   // }
+//   // console.log("purge")
+// }
+// console.log(accNum)
+// if (accNum == firstArray.length){
+//   console.log("it's an isogram")
+// }
+
+// * EJERCICIO:
+//  * - Muestra ejemplos de asignación de variables "por valor" y "por referencia", según
+//  *   su tipo de dato.
+//  * - Muestra ejemplos de funciones con variables que se les pasan "por valor" y 
+//  *   "por referencia", y cómo se comportan en cada caso en el momento de ser modificadas.
+//  * (Entender estos conceptos es algo esencial en la gran mayoría de lenguajes)

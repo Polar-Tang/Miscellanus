@@ -9,3 +9,5 @@ some of the link reference may contein anoying adds, i'd prefer to disable javas
 **Examples:**
  - [formating string on python](https://www.geeksforgeeks.org/python-string-format-method/)
  - [printf on bash](https://linuxize.com/post/bash-printf-command/)
+# API
+It's any **interface** or set of tools/functions that a developer interacts with.
