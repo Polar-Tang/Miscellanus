@@ -1,3 +1,4 @@
+// https://pentestgpt.ai/share/ab8edf63-b01e-4a90-8061-651a25569fb2
 // /*  /*
 //  * ¿Preparad@ para aprender o repasar el lenguaje de programación que tú quieras?
 //  * - Recuerda que todas las instrucciones de participación están en el
@@ -505,3 +506,22 @@ var regexForTHis = /,/g;
 //  * - Muestra ejemplos de funciones con variables que se les pasan "por valor" y 
 //  *   "por referencia", y cómo se comportan en cada caso en el momento de ser modificadas.
 //  * (Entender estos conceptos es algo esencial en la gran mayoría de lenguajes)
+var x = 10;
+var y = x; // y gets a *copy* of x's value
+y = 20;
+var somethinggg = function () {
+    console.log("hola");
+};
+console.log(somethinggg());
+// reference by it value
+var obj3 = Person; // obj2 points to the same object as obj1
+// obj2.name = "Bob";
+// console.log(obj1.name);  // Output: "Bob" (both obj1 and obj2 reference the same object)
+// console.log(obj2.name);  // Output: "Bob"
+console.log(x); // Output: 10 (x is unchanged)
+console.log(y); // Output: 20 (y is now 20)
+var arr1 = [1, 2, 3];
+var arr2 = arr1; // Both arr1 and arr2 point to the same array
+arr2.push(4);
+console.log(arr1); // Output: [1, 2, 3, 4]
+console.log(arr2); // Output: [1, 2, 3, 4]
