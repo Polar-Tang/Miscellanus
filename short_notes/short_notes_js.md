@@ -31,6 +31,7 @@ These are the basic data types in TypeScript:
   let nothing: null = null;
   let notDefined: undefined = undefined;
   ```
+- `HTMLElement` 
 
 ### **2. Arrays**
 
@@ -78,7 +79,13 @@ Objects in TypeScript are used to represent key-value pairs, and you can define 
   }
   let alice: Person = { name: "Alice", age: 30 };
   ```
+- `non-null assertion operator`
+**non-null assertion operator (`!`)** to tell TypeScript that these variables are **never `null`**
+```ts
+let frontButton: HTMLElement | null = document.getElementById("front");
 
+frontButton!.addEventListener("click", () => { currentIndex = (currentIndex + 1) % imgArray.length; loadImage(); });
+```
 ### **5. Maps**
 
 A `Map` is a collection of key-value pairs, where keys and values can be of any type.
@@ -487,6 +494,72 @@ An **IIFE** is a function that **invokes itself automatically** right after its 
 ```
 - The parentheses around the function declaration `(function() {...})` tell JavaScript to treat it as an expression.
 - The `()` at the end invokes the function **immediately**.
+### Recursion
+The act of a function calling itserlf, ir recives two inputs, a base case (end o recursion) and recursive case (resumes recursion)
+- **Base case**: A condition that stops the recursion.
+- **Recursive case**: The function calls itself with modified arguments to eventually reach the base case.
+**Example:**
+```js
+const factorial = (n) => {
+  if (n === 0 || n === 1) return 1;  // Base case
+  return n * factorial(n - 1);       // Recursive call
+}
+
+console.log(factorial(5));  // Output: 120
+
+```
+Have you ever seen self-similarity fractals? or something that repeates over itself  recursively? that's what happened here.
+![[Pasted image 20240920094835.png]]
+so here's the function got one parameter, and evaluates first if this parameters is 0 or equal to 1. then the recursive call will execute if the `if` it's not satisfied, this return a value which is n multiplied by its predecessor. The function doesn't stop after the first call because the result of the recursive call `factorial(n - 1)` value hasn't be computed yet, so the stack call waits there for the predecesor and continues subtracting 1, that is the subproblem.
+1. **Call `factorial(5)`**:
+    
+    - `n = 5`.
+    - The function checks `if (n === 0 || n === 1)`, which is **false**.
+    - The function returns `5 * factorial(4)`. The calculation of `5 * factorial(4)` is **pushed onto the call stack**.
+2. **Call `factorial(4)`**:
+    
+    - `n = 4`.
+    - The function checks `if (n === 0 || n === 1)`, which is **false**.
+    - The function returns `4 * factorial(3)`. This result is **pushed onto the call stack**.
+3. **Call `factorial(3)`**:
+    
+    - `n = 3`.
+    - The function checks `if (n === 0 || n === 1)`, which is **false**.
+    - The function returns `3 * factorial(2)`. This result is **pushed onto the call stack**.
+4. **Call `factorial(2)`**:
+    
+    - `n = 2`.
+    - The function checks `if (n === 0 || n === 1)`, which is **false**.
+    - The function returns `2 * factorial(1)`. This result is **pushed onto the call stack**.
+5. **Call `factorial(1)`**:
+    
+    - `n = 1`.
+    - The function checks `if (n === 0 || n === 1)`, which is **true**.
+    - The function returns `1`. This **base case return value** is **pushed back to the previous call**.
+the **base case** is reached (`n === 1`), and then the function **starts returning** values, going back up the call stack.
+### **What do `try` and `catch` do?**
+
+>In JavaScript, **`try` and `catch`** are used for **error handling**. They allow you to "catch" and respond to errors or exceptions that might occur in your code, instead of the entire script breaking or the application crashing. 
+
+1. **`try`**: The code inside the `try` block is executed first. If it runs without issues, the `catch` block is **skipped**.
+2. **`catch`**: If an error occurs inside the `try` block, the execution jumps immediately to the `catch` block. You can handle the error here, display a message, log it, or take any corrective action.
+3. **`finally`** (optional): The code inside the `finally` block runs regardless of whether an error occurred or not. It's useful for cleanup actions (e.g., closing resources).
+
+#### **Basic Syntax**:
+```javascript
+try {
+  // Code that may throw an error
+  let result = riskyOperation();
+  console.log(result);
+} catch (error) {
+  // Code to handle the error
+  console.error("An error occurred:", error);
+} finally {
+  // Optional cleanup code that runs whether there was an error or not
+  console.log("This always runs.");
+}
+```
+
 # JavaScript
 ## Symbol
 newer data type primitive which is inmutable and isn't repeateble
