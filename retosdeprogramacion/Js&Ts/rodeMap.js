@@ -525,6 +525,7 @@ var arr2 = arr1; // Both arr1 and arr2 point to the same array
 arr2.push(4);
 console.log(arr1); // Output: [1, 2, 3, 4]
 console.log(arr2); // Output: [1, 2, 3, 4]
+<<<<<<< HEAD
 // * DIFICULTAD EXTRA (opcional):
 //  * Crea dos programas que reciban dos parámetros (cada uno) definidos como
 //  * variables anteriormente.
@@ -588,3 +589,123 @@ const getMaxCallStackSize = (i) => {
   
   console.log(getMaxCallStackSize(1));
   
+=======
+// * EJERCICIO:
+// * Entiende el concepto de recursividad creando una función recursiva que imprima
+// * números del 100 al 0.
+var hundredBackwards = function (n) {
+    if (n <= 1) {
+        return 1;
+    }
+    console.log(n);
+    return hundredBackwards(n - 1);
+};
+//console.log(hundredBackwards(100))
+// * DIFICULTAD EXTRA (opcional):
+//  * Utiliza el concepto de recursividad para:
+//  * - Calcular el factorial de un número concreto (la función recibe ese número).
+var factorial = function (n) {
+    if (n === 0) {
+        return 1;
+    }
+    else {
+        return n * factorial(n - 1);
+    }
+};
+//console.log(factorial(10));
+// 3628800
+// * - Calcular el valor de un elemento concreto (según su posición) en la 
+// *   sucesión de Fibonacci (la función recibe la posición).
+var fibonacci = function (n) {
+    if (n <= 2) {
+        return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+};
+//console.log(fibonacci(7))
+// * EJERCICIO:
+//  * Implementa los mecanismos de introducción y recuperación de elementos propios de las
+//  * pilas (stacks - LIFO) y las colas (queue - FIFO) utilizando una estructura de array
+//  * o lista (dependiendo de las posibilidades de tu lenguaje).
+var string_list = ["patata", "zapatilla", "camello", "exersisios"];
+// stacks
+console.log("Quitar a la pila ", string_list.shift());
+console.log("Agregar a la pila ", string_list.unshift());
+// queue
+console.log("Traer el último de la fila ", string_list.pop());
+console.log("Agregar el último a la fila ", string_list.push("fritatas"));
+// * DIFICULTAD EXTRA (opcional):
+// * - Utilizando la implementación de pila y cadenas de texto, simula el mecanismo adelante/atrás
+// *   de un navegador web. Crea un programa en el que puedas navegar a una página o indicarle
+// *   que te quieres desplazar adelante o atrás, mostrando en cada caso el nombre de la web.
+// *   Las palabras "adelante", "atrás" desencadenan esta acción, el resto se interpreta como
+// *   el nombre de una nueva web.
+// * - Utilizando la implementación de cola y cadenas de texto, simula el mecanismo de una
+// *   impresora compartida que recibe documentos y los imprime cuando así se le indica.
+// *   La palabra "imprimir" imprime un elemento de la cola, el resto de palabras se
+// *   interpretan como nombres de documentos.
+var frontButton = document.getElementById("front");
+var backButton = document.getElementById("back");
+var imageToLoad = document.getElementById("image-to-load");
+var imgArray = ["https://i.scdn.co/image/ab67616d0000b2730f9c31e98f195754525dc7f0", "https://upload.wikimedia.org/wikipedia/commons/3/3c/HF2022Megadeth_2.jpg", "https://es.concerts-metal.com/images/flyers/202311/1700661673--Tool---Tour-2024.webp", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1QcGXqBUMUF_VekRVjQvIBZb1JGVvGa5XA&s"];
+var currentIndex = 0;
+var loadIMage = function () {
+    imageToLoad.innerHTML = "<img style=\"width: 200px;\" src=".concat(imgArray[currentIndex], "/>");
+};
+document.addEventListener('DOMContentLoaded', function () {
+    loadIMage();
+});
+frontButton.addEventListener("click", function () {
+    currentIndex = (currentIndex + 1) % imgArray.length;
+    loadIMage();
+});
+backButton.addEventListener("click", function () {
+    currentIndex = (currentIndex - 1 + imgArray.length) % imgArray.length;
+    loadIMage();
+});
+// * EJERCICIO:
+// * Explora el concepto de clase y crea un ejemplo que implemente un inicializador,
+// * atributos y una función que los imprima (teniendo en cuenta las posibilidades
+// * de tu lenguaje).
+// * Una vez implementada, créala, establece sus parámetros, modifícalos e imprímelos
+// * utilizando su función.
+// class MyObject {
+//   nombre: string 
+//   id: number 
+//   usage: string
+//   constructor(nombre: string, id: number, usage: string){
+//     this.nombre = nombre
+//     this.id = id
+//     this.usage = usage
+//   }
+// }
+// class HandleObject {
+//   nombre: string 
+//   id: number 
+//   usage: string
+//   constructor(my_object:MyObject){
+//     this.nombre = my_object.nombre
+//     this.id = my_object.id
+//     this.usage = my_object.usage
+//   }
+// }
+//   presentarObjet(nombre: string, id++, usage: string): void{
+//     const nuevo_empleado = new MyObject(nombre, );
+//   }
+// }
+// * EJERCICIO:
+// * Explora el concepto de manejo de excepciones según tu lenguaje.
+// * Fuerza un error en tu código, captura el error, imprime dicho error
+// * y evita que el programa se detenga de manera inesperada.
+// * Prueba a dividir "10/0" o acceder a un índice no existente
+// * de un listado para intentar provocar un error.
+try {
+    var stackOverflow = function (n) {
+        // return stackOverflow(n - 1)
+    };
+}
+catch (_a) {
+    console.log("Ilegal movement");
+}
+// 
+>>>>>>> 6e5ee58696604b41c128609e58c21fc86ccfefc7

@@ -235,6 +235,8 @@
   },
   "active": "3fc344c14dd4696b",
   "lastOpenFiles": [
+    "short_notes/short_notes_js.md",
+    "short_notes/Pasted image 20240920094835.png",
     "short_notes/short_notes.go/looping/for.md",
     "short_notes/short_notes.go/work.md",
     "short_notes/short_notes.go/rune.md",
@@ -270,7 +272,6 @@
     "short_notes/short_notes.js/object methods",
     "short_notes/short_notes.js/string methods/match().md",
     "short_notes/short_notes.js/TS data types/short_notes_js.md",
-    "short_notes/short_notes.js/string methods",
-    "short_notes/short_notes.js/TS data types/Interface.md"
+    "short_notes/short_notes.js/string methods"
   ]
 }
