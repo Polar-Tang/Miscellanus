@@ -679,3 +679,54 @@ arr2.push(4);
 
 console.log(arr1);  // Output: [1, 2, 3, 4]
 console.log(arr2);  // Output: [1, 2, 3, 4]
+
+// * DIFICULTAD EXTRA (opcional):
+//  * Crea dos programas que reciban dos parámetros (cada uno) definidos como
+//  * variables anteriormente.
+//  * - Cada programa recibe, en un caso, dos parámetros por valor, y en otro caso, por referencia.
+//  *   Estos parámetros los intercambia entre ellos en su interior, los retorna, y su retorno
+//  *   se asigna a dos variables diferentes a las originales. A continuación, imprime
+//  *   el valor de las variables originales y las nuevas, comprobando que se ha invertido
+//  *   su valor en las segundas.
+//  *   Comprueba también que se ha conservado el valor original en las primeras.
+
+
+
+// const programa1 = (param1: number= 0, param2: number = 0) => { 
+//   return param1 + param2
+  
+// }
+
+// console.log(programa1(21, 22))
+// let param1: number = 34
+// let param2: number = 2
+// console.log(programa1(param1, param2))
+// console.log(programa1(2, 2))
+
+// const programa2 = (param1: number = 0, param2: number = 0) => { 
+//   param1 = param2
+//   console.log("this is param1 in program two ",param1, " this is param 2 in program two ", param2)
+// }
+// console.log(programa2(param1, param2))
+
+// -------------------------------------------- 6 RECURSIVIDAD
+// * EJERCICIO:
+//  * Entiende el concepto de recursividad creando una función recursiva que imprima
+//  * números del 100 al 0.
+/* 
+// for( let i = 100; i >= 0; i--){
+//   console.log(i)
+// } */
+/* * DIFICULTAD EXTRA (opcional):
+* Utiliza el concepto de recursividad para:
+* - Calcular el factorial de un número concreto (la función recibe ese número).
+* - Calcular el valor de un elemento concreto (según su posición) en la 
+*   sucesión de Fibonacci (la función recibe la posición). */
+let acc1 = 0
+let acc2 = 1
+
+for(let i = 1; i > 5; i++ ){
+  acc1= acc1 + acc2
+  acc2 = acc1 + acc2
+  console.log(acc2, " se suma a ", acc1)
+}

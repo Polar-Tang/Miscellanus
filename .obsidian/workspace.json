@@ -13,13 +13,86 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "short_notes/short_notes_bash.md",
+                "file": "short_notes/lpm.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "lpm"
+            }
+          },
+          {
+            "id": "c7af6a771062ec29",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "short_notes/short_notes.js/JS data types/bolean/operators/AND_operator.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AND_operator"
+            }
+          },
+          {
+            "id": "12ec38fea7b731fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "short_notes/asd.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "asd"
+            }
+          },
+          {
+            "id": "168ae869b049b09c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "asd.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "asd"
+            }
+          },
+          {
+            "id": "ea077a2fb4ce67fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "short_notes/short_notes.go/go.mod.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "go.mod"
+            }
+          },
+          {
+            "id": "3fc344c14dd4696b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "short_notes/short_notes.go/work.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "work"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -39,7 +112,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -48,13 +123,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "initia",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,14 +139,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 298.5
   },
   "right": {
     "id": "9f87e0904bd40878",
@@ -85,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "short_notes/short_notes_bash.md",
+                "file": "short_notes/lpm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +172,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for lpm"
             }
           },
           {
@@ -102,10 +183,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "short_notes/short_notes_bash.md",
+                "file": "short_notes/lpm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from lpm"
             }
           },
           {
@@ -116,7 +199,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +210,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "short_notes/short_notes_bash.md"
-              }
+                "file": "short_notes/lpm.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of lpm"
             }
           }
         ]
@@ -146,10 +233,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4e6d4a881b5dc22b",
+  "active": "3fc344c14dd4696b",
   "lastOpenFiles": [
-    "short_notes/short_notes_js.md",
-    "short_notes/fundaments.md",
-    "short_notes/short_notes_bash.md"
+    "short_notes/short_notes.go/looping/for.md",
+    "short_notes/short_notes.go/work.md",
+    "short_notes/short_notes.go/rune.md",
+    "short_notes/short_notes.go/looping",
+    "short_notes/short_notes.go/packages/package.md",
+    "short_notes/short_notes.go/varaible declaration/const.md",
+    "short_notes/short_notes.go/varaible declaration/var.md",
+    "short_notes/short_notes.go/operators/reference.md",
+    "short_notes/short_notes.go/exportad-name.md",
+    "short_notes/short_notes.go/go.mod.md",
+    "short_notes/short_notes.go/packages/fmt.md",
+    "short_notes/short_notes.go/varaible declaration",
+    "short_notes/initialize.md",
+    "short_notes/short_notes.go/operators",
+    "short_notes/short_notes.go/funcitons/function_fundamental.md",
+    "Pasted image 20241127231136.png",
+    "short_notes/short_notes.go/funcitons",
+    "short_notes/short_notes.go/packages",
+    "short_notes/short_notes.go/module.md",
+    "Untitled.md",
+    "short_notes/short_notes.go",
+    "short_notes/short_notes.js/object methods/entries.md",
+    "short_notes/asd.md",
+    "asd.md",
+    "temp.md",
+    "short_notes/short_notes.js/DOM tree.md",
+    "short_notes/short_notes.js/JS data types/bolean/operators/AND_operator.md",
+    "short_notes/short_notes.js/JS data types/bolean/operators",
+    "short_notes/short_notes.js/JS data types/bolean",
+    "short_notes/short_notes.js/inheritance and the prototype chain.md",
+    "short_notes/short_notes.js/object methods/hasOwnPorperty.md",
+    "short_notes/short_notes.js/string methods/includes().md",
+    "short_notes/short_notes.js/object methods",
+    "short_notes/short_notes.js/string methods/match().md",
+    "short_notes/short_notes.js/TS data types/short_notes_js.md",
+    "short_notes/short_notes.js/string methods",
+    "short_notes/short_notes.js/TS data types/Interface.md"
   ]
 }
