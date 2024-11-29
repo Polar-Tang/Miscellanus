@@ -28,3 +28,4 @@ const (
 )
 ```
 
+A constant in go should be unmutable, so if we try to apply this to something like a slice (`[]string`) it will retrieve an error 
