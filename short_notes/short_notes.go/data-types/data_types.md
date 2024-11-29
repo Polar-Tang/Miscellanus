@@ -1,12 +1,17 @@
 ### **Primitive Data Types Summary**
 
-| **Category** | **Type**                  | **Examples / Notes**                                        |
-| ------------ | ------------------------- | ----------------------------------------------------------- |
-| Boolean      | `bool`                    | `true`, `false`                                             |
-| Integers     | `int`, `int8`, etc.       | Signed (`int`, `int8`, etc.) and unsigned (`uint`, `uint8`) |
-| Floats       | `float32`, `float64`      | IEEE-754 floating-point numbers                             |
-| Complex      | `complex64`, `complex128` | Complex numbers like `5 + 7i`                               |
-| String       | `string`                  | UTF-8 encoded, immutable                                    |
+| **C| **Function** | **Description**                                                  |
+| ------------ | ---------------------------------------------------------------- |
+| `len()`      | Returns the length of a string, slice, array, or map.            |
+| `cap()`      | Returns the capacity of a slice.                                 |
+| `append()`   | Adds elements to a slice and returns the updated slice.          |
+| `copy()`     | Copies elements from one slice to another.                       |
+| `make()`     | Creates slices, maps, or channels.                               |
+| `new()`      | Allocates memory for a variable and returns a pointer to it.     |
+| `delete()`   | Removes a key-value pair from a map.                             |
+| `print()`    | Prints to standard output (for debugging, minimal formatting).   |
+| `panic()`    | Stops program execution with a runtime error.                    |
+| `recover()`  | Recovers from a panic, allowing the program to continue running. |   | `string`                  | UTF-8 encoded, immutable                                    |
 | Special      | `byte` (`uint8`)          | Alias for `uint8`, often used for raw binary data           |
 |              | `rune` (`int32`)          | Represents Unicode code points                              |
 | Dynamic      | `interface{}`             | Can hold any value, requires type assertion to use          |

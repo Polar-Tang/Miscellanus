@@ -74,12 +74,6 @@ func gt(a, b int) string {
 	return fmt.Sprintf("%d is equal to %d", a, b)
 }
 
-func main() {
-	fmt.Println(gt(5, 3)) // Outputs: 5 is greater than 3
-	fmt.Println(gt(3, 5)) // Outputs: 3 is less than 5
-	fmt.Println(gt(5, 5)) // Outputs: 5 is equal to 5
-}
-
 ///iterativas, excepciones...
 
 func fors() {
@@ -138,6 +132,31 @@ func panicAndRecover() {
 	panic("Something went terribly wrong!") // Triggers a panic
 	fmt.Println("After panic.")             // This won't execute
 }
+
+/*
+* DIFICULTAD EXTRA (opcional):
+* Crea un programa que imprima por consola todos los números comprendidos
+* entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3.
+ */
+
+func extraDificulty() {
+	for i := 0; i < 55; i += 1 {
+		if i%2 == 0 {
+			fmt.Printf("The iteration is: %d is pair\n", i)
+			continue
+		} else if i%2 == 1 {
+			fmt.Printf("The iteration is: %d is odd\n", i)
+			continue
+		} else if i%15 == 0 {
+			fmt.Printf("The iteration is: %d it's multiple of 15 too\n", i)
+			continue
+		}
+	}
+}
+
+// func main() {
+// 	extraDificulty()
+// }
 
 // func broadcast(ip, mask uint32) uint32 {
 // 	return ip | (^mask) // OR the IP with the inverted mask

@@ -1,2 +1,0 @@
-In Go, a package is a way to group functions, Go packages allow **reusability** by letting you to use your own or other packages in your code, you code search for them:
-https://pkg.go.dev/search?q=quote
