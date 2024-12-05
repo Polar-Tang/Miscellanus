@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const randomId = Math.random().toString(36).substring(2, 10);
+        const labUrl = `https://${randomId}.web-security-academy.net/`;
+        window.location.href = labUrl;  // Redirects the user to the new lab URL
+
+    </script>
+</body>
+</html>

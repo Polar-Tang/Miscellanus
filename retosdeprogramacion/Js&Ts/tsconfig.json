@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "downlevelIteration": true
+  },
+  "include": ["./**/*.ts"],  // Include all .ts files in the src folder
+  "exclude": ["node_modules"]  // Exclude node_modules
+}

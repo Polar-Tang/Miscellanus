@@ -1,0 +1,1 @@
+A **channel** is a type used for communication between goroutines. It allows one goroutine to send data and another to receive it, ensuring **thread-safe communication**.
