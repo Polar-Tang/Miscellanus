@@ -14,3 +14,5 @@ data := []string{"Alice", "Bob", "Charlie"}
 fmt.Println(data[0]) // Outputs: Alice
 fmt.Println(len(data)) // Outputs: 3
 ```
+
+[]T{x1, x2, … xn}

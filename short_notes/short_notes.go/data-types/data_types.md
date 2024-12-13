@@ -1,4 +1,16 @@
-	### **Primitive Data Types Summary**
+### **Primitive Data Types Summary**
+
+The types used by default in go are:
+- `bool`
+- `string`
+- `int`
+- `uint`
+- `byte`
+- `rune`
+- `float64`
+- `complex128`
+
+	You may want to change this if you are so concerned about the usage or if you want to use a large range of unicode bits
 
 | **C| **Function** | **Description**                                                  |
 | ------------ | ---------------------------------------------------------------- |

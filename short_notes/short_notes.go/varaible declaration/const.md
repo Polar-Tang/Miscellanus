@@ -1,4 +1,5 @@
 Constants are variable that its value will never be changed, so instead of var, this is a variable that not vary.
+They just can be the default [[data_types]], and they must be known at the compile time, which means we cannot use the [[Walrus_operator]] to initialize it and declare in the same line
 They're useful for values that you know will never change, like mathematical constants, fixed strings, or configuration keys.
 
 Here’s how you declare a constant in Go:
