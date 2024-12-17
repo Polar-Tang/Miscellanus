@@ -1,13 +1,13 @@
 Used to assign or modify variables.
 
-|Operator|Description|Example|
-|---|---|---|
-|`=`|Assign value|`a = 5`|
-|`+=`|Add and assign|`a += 2`|
-|`-=`|Subtract and assign|`a -= 2`|
-|`*=`|Multiply and assign|`a *= 2`|
-|`/=`|Divide and assign|`a /= 2`|
-|`%=`|Modulus and assign|`a %= 2`|
+| Operator | Description         | Example  |
+| -------- | ------------------- | -------- |
+| `=`      | Assign value        | `a = 5`  |
+| `+=`     | Add and assign      | `a += 2` |
+| `-=`     | Subtract and assign | `a -= 2` |
+| `*=`     | Multiply and assign | `a *= 2` |
+| `/=`     | Divide and assign   | `a /= 2` |
+| `%=`     | Modulus and assign  | `a %= 2` |
 
 **Example:**
 

@@ -6,21 +6,27 @@ map[KeyType]ValueType
 
 - **`KeyType`** should be any type of the [[comparable-types]]
 - **`ValueType`** could be any type, even a map
+-----
+##### Maps are passed by reference
+Changes made to the map within the function are reflected in the original map variable outside the function.
 
-
+-------
 #### Declaration
 the keytype is a strin and the value type is an int:
+##### (Don't do this)
 ```go
 var m map[string]int
 ```
 The [[zero_value]] of a map is nil.
 But this will cause a run time panic. To avoid that use a [[make]] for better [[memory-allocating]]
-#### Initialize the map thus:
+##### Initialize the map thus:
 ```GO
-m = make(map[string]int)
+m := make(map[string]int)
 ```
-### Insert an elemnt
-To initializate any object of the slice we could use:
+
+-----
+### Insert an element
+To initialize any object of the slice we could use:
 ```go
 m[key] = elem
 ```
@@ -56,7 +62,37 @@ func getUserMap(names []string, phoneNumbers []int) (map[string]user, error) {
     return newUser, nil
 }
 ```
+------
+#### To declare a map inside a map
+##### (Don't do this)
+```go
+n := hits["/doc/"]["au"]
+```
+So instead of returning an entire map and do complicating things, first create a struct:
+```go
+type Key struct {
+    Path, Country string
+}
+hits := make(map[Key]int)
+```
+ we use the [[mutation]], which is a feature of the map, and we were just changing an element of the map and not the entire map
+```go
+ hits[Key{"/", "vn"}]++
+```
+And now you're working with a copy of that value,
+##### Initialize the map thus:
+We actually want to initiaze an interface
+
+```go
+type Key struct {
+	Path, Country string
+}
+hits := make(map[Key]int)
+```
+
+--------
 ### Get an element
+Get an element looks 
 ```go
 elem = m[key]
 ```
@@ -79,11 +115,17 @@ func deleteIfNecessary(users map[string]user, name string) (deleted bool, err er
 }
 ```
 If i'd use a for here the ok condition would never worked
+
+
+
+-------
 ### Delete an element
 ```go
 delete(m, key)
 ```
 The `delete` function doesn’t return anything, and will do nothing if the specified key doesn’t exist.
+
+--------
 ### Check if a key exists
 ```go
 elem, ok := m[key]
@@ -97,5 +139,3 @@ for key, value := range m {
     fmt.Println("Key:", key, "Value:", value)
 }
 ```
-
-

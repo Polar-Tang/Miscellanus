@@ -1,0 +1,1 @@
+Stack memory is handled by the compiler and is allocated in a LIFO (Last-In-First-Out) manner.

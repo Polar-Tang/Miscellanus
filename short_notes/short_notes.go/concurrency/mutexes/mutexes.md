@@ -1,0 +1,1 @@
+Mutexes lock and unlock access to data , so we could use this to ensure we where we could access to any data in certain time, so it's pretty useful for [[Goroutine]].
