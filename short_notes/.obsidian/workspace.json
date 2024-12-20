@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "short_notes.go/built-in functions/packages/package.md",
+                "file": "short_notes.js/TS data types/TS data structure.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "package"
+              "title": "TS data structure"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "hash",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -164,6 +164,17 @@
   },
   "active": "7b0cd9866e28f44e",
   "lastOpenFiles": [
+    "short_notes.js/TS data types/short_notes_js.md",
+    "short_notes.js/operators/assignment.md",
+    "short_notes.js/JS data types/Undifined.md",
+    "short_notes.js/operators",
+    "short_notes.js/orm.md",
+    "short_notes.js/express/imports/destruct import.md",
+    "short_notes.js/express/Untitled.md",
+    "short_notes.js/express/imports",
+    "short_notes.go/built-in functions/packages/net http/basic_get.md",
+    "short_notes.js/express",
+    "short_notes.go/built-in functions/packages/package.md",
     "short_notes.go/built-in functions/packages/packages.md",
     "short_notes.go/data-types/slice.md",
     "short_notes.go/data-types/data_types.md",
@@ -186,15 +197,7 @@
     "short_notes.go/built-in functions",
     "short_notes.go/looping/for(c-like).md",
     "short_notes.go/operators/Bitwise Operators.md",
-    "short_notes.go/operators/Logical Operators.md",
-    "short_notes.go/operators/Membership.md",
-    "short_notes.go/operators/reference.md",
-    "short_notes.go/work.md",
-    "short_notes.go/Untitled.md",
-    "short_notes_js.md",
     "Pasted image 20240920094835.png",
-    "fundaments.md",
-    "Pasted image 20240916211933.png",
-    "short_notes_bash.md"
+    "Pasted image 20240916211933.png"
   ]
 }
