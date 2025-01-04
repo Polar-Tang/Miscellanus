@@ -38,6 +38,8 @@ func main() {
 }
 ```
 And we send an empty struct which consume zero memory but indicates that the task has finished. 
+
+
 #### Another example
 Also we could send a value that is irrelevant:
 ```go

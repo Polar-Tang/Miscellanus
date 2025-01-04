@@ -67,5 +67,5 @@ func fibonacci(n int, ch chan int) {
 ```
 
 #### Make an arbitrary limit of channels
-With a [[chanel-buffered]]
+With a [[buffered-chanel]]
 ![[Pasted image 20241215123354.png]]

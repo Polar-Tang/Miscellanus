@@ -1,4 +1,4 @@
-his important because *In Go, it isn’t safe to read from and write to a map at the same time*. if a mutex is reading data, and other thread is changing that dat it will cause a state panic in go becuase it can be accessing to corrupted information. This script will cause an error
+This is important because *In Go, it isn’t safe to read from and write to a map at the same time*. if a mutex is reading data, and other thread is changing that data, in go, it will cause a state panic because it can be accessing to corrupted information. This script will cause an error
 ```go
 package main
 

@@ -34,49 +34,26 @@ The entire file:
 ```go
 package main
 
-  
-
 type sms struct {
-
     id      string
-
     content string
-
     tags    []string
-
 }
-
-  
 
 func tagMessages(messages []sms, tagger func(sms) []string) []sms {
-
     messagestagged := make([]sms, len(messages))
-
     for key, msg := range messages {
-
         tags := tagger(msg)
-
         messagestagged[key] = sms{msg.id, msg.content, tags}
-
     }
-
     return messagestagged
-
 }
 
-  
-
 func tagger(msg sms) []string {
-
     tags := []string{}
-
     for _, char := range msg.content {
-
         tags = append(tags, string(char))
-
     }
-
     return tags
-
 }
 ```
